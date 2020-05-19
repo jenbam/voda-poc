@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ include "todofrontend.fullname" . }}
   labels:
+    app: todo-app-vodafone
     {{- include "todofrontend.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
